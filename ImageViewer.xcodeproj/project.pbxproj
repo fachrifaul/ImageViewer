@@ -43,7 +43,6 @@
 		A230F1212300505600E5E9A5 /* seek@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A230F1112300505600E5E9A5 /* seek@2x.png */; };
 		A230F1222300505600E5E9A5 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A230F1122300505600E5E9A5 /* play.png */; };
 		A230F1232300505600E5E9A5 /* seek@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A230F1132300505600E5E9A5 /* seek@3x.png */; };
-		A230F1252300509900E5E9A5 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A230F1242300509900E5E9A5 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,7 +85,6 @@
 		A230F1112300505600E5E9A5 /* seek@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seek@2x.png"; sourceTree = "<group>"; };
 		A230F1122300505600E5E9A5 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		A230F1132300505600E5E9A5 /* seek@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seek@3x.png"; sourceTree = "<group>"; };
-		A230F1242300509900E5E9A5 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		E91A7CC874FDB7FD7E0FE5A1 /* Pods-ImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageViewer.debug.xcconfig"; path = "Target Support Files/Pods-ImageViewer/Pods-ImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,7 +148,6 @@
 				A230F0E823004EDC00E5E9A5 /* PhotosCollectionLayout.swift */,
 				A230F0E523004EDC00E5E9A5 /* PhotosController.swift */,
 				A230F0EA23004EDC00E5E9A5 /* PopupController.swift */,
-				A230F1242300509900E5E9A5 /* PhotoViewController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -352,7 +349,6 @@
 				A230F0D423004E3000E5E9A5 /* ViewController.swift in Sources */,
 				A230F0F323004EDC00E5E9A5 /* PhotosController.swift in Sources */,
 				A230F0D223004E3000E5E9A5 /* AppDelegate.swift in Sources */,
-				A230F1252300509900E5E9A5 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

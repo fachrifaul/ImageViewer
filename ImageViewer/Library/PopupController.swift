@@ -1,7 +1,7 @@
 import UIKit
 
 protocol OptionsControllerDelegate: class {
-    func optionsController(optionsController: OptionsController, didSelectOption option: String)
+    func optionsController(optionsController: OptionsController, didSelectOption option: String, position: Int)
 }
 
 class OptionsController: UITableViewController {
@@ -9,7 +9,7 @@ class OptionsController: UITableViewController {
     static let PopoverSize = CGFloat(179)
     weak var delegate: OptionsControllerDelegate?
     static let RowHeight = CGFloat(60.0)
-    fileprivate var options = ["First option", "Second option", "Third option"]
+    fileprivate var options = ["enabled drag to dismiss", "disabled drag to dismiss", "dismiss"]
 
     init(sourceView: UIView, sourceRect: CGRect) {
         super.init(nibName: nil, bundle: nil)
@@ -63,6 +63,6 @@ extension OptionsController {
 
     public override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let option = self.options[indexPath.row]
-        self.delegate?.optionsController(optionsController: self, didSelectOption: option)
+        self.delegate?.optionsController(optionsController: self, didSelectOption: option, position: indexPath.row)
     }
 }

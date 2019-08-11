@@ -10,6 +10,7 @@ class PhotosController: UICollectionViewController {
     var dataSourceType: DataSourceType
     var viewerController: ViewerController?
     var optionsController: OptionsController?
+    var enableDragToDismiss: Bool = true
 
     func numberOfItems() -> Int {
         var count = 0
@@ -140,6 +141,7 @@ extension PhotosController {
         self.viewerController = ViewerController(initialIndexPath: indexPath, collectionView: collectionView)
         self.viewerController!.dataSource = self
         self.viewerController!.delegate = self
+        self.viewerController!.enableDragToDismiss = enableDragToDismiss
 
         #if os(iOS)
             let headerView = HeaderView()
@@ -201,7 +203,15 @@ extension PhotosController: ViewerControllerDelegate {
 
 extension PhotosController: OptionsControllerDelegate {
 
-    func optionsController(optionsController _: OptionsController, didSelectOption _: String) {
+    func optionsController(optionsController _: OptionsController, didSelectOption option: String, position: Int) {
+        switch position {
+        case 0:
+            enableDragToDismiss = true
+        case 1:
+            enableDragToDismiss = false
+        default:
+            print(option)
+        }
         self.optionsController?.dismiss(animated: true) {
             self.viewerController?.dismiss(nil)
         }

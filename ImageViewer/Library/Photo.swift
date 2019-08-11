@@ -49,7 +49,7 @@ class Photo: Viewable {
             for row in 0 ..< 10 {
                 let photo = Photo(id: "\(sectionIndex)-\(row)")
 
-                let index = Int(arc4random_uniform(6))
+                let index = Int(arc4random_uniform(7))
                 switch index {
                 case 0:
                     photo.placeholder = UIImage(named: "0.jpg", in: Bundle(for: Photo.self), compatibleWith: nil)!
@@ -67,13 +67,13 @@ class Photo: Viewable {
                     photo.placeholder = UIImage(named: "4.jpg", in: Bundle(for: Photo.self), compatibleWith: nil)!
                     break
                 case 5:
-                    photo.url = "http://rinjaninationalpark.com/wp-content/uploads/2016/09/gunungrinjanilombok21.jpg"
-                    photo.type = .image
-                    break
-                case 6:
                     photo.placeholder = UIImage(named: "5.png", in: Bundle(for: Photo.self), compatibleWith: nil)!
                     photo.url = "http://techslides.com/demos/sample-videos/small.mp4"
                     photo.type = .video
+                case 6:
+                    photo.url = "http://rinjaninationalpark.com/wp-content/uploads/2016/09/gunungrinjanilombok21.jpg"
+                    photo.type = .image
+                    break
                 default: break
                 }
                 photos.append(photo)
